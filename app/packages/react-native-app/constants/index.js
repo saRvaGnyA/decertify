@@ -1,41 +1,6 @@
-export const contractAddress = "0x6175106171e32aE36c4E7483C8c9C0cc065F3eF7";
+export const contractAddress = "0x1CCadcA3488E487b2a1df53Ac800Ca237150F4a7";
 
 export const abi = [
-  {
-    inputs: [],
-    name: "getOrgDetails",
-    outputs: [
-      {
-        components: [
-          {
-            internalType: "address",
-            name: "organizationAddress",
-            type: "address",
-          },
-          {
-            internalType: "string",
-            name: "organizationName",
-            type: "string",
-          },
-          {
-            internalType: "string",
-            name: "organizationEmail",
-            type: "string",
-          },
-          {
-            internalType: "uint256",
-            name: "requestCount",
-            type: "uint256",
-          },
-        ],
-        internalType: "struct Decertify.Organization",
-        name: "",
-        type: "tuple",
-      },
-    ],
-    stateMutability: "nonpayable",
-    type: "function",
-  },
   {
     inputs: [
       {
@@ -143,9 +108,9 @@ export const abi = [
         type: "string",
       },
       {
-        internalType: "uint256",
+        internalType: "int256",
         name: "updatedStatus",
-        type: "uint256",
+        type: "int256",
       },
       {
         internalType: "string",
@@ -230,6 +195,41 @@ export const abi = [
         internalType: "struct Decertify.Organization[]",
         name: "",
         type: "tuple[]",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "getOrgDetails",
+    outputs: [
+      {
+        components: [
+          {
+            internalType: "address",
+            name: "organizationAddress",
+            type: "address",
+          },
+          {
+            internalType: "string",
+            name: "organizationName",
+            type: "string",
+          },
+          {
+            internalType: "string",
+            name: "organizationEmail",
+            type: "string",
+          },
+          {
+            internalType: "uint256",
+            name: "requestCount",
+            type: "uint256",
+          },
+        ],
+        internalType: "struct Decertify.Organization",
+        name: "",
+        type: "tuple",
       },
     ],
     stateMutability: "view",

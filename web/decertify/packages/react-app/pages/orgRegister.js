@@ -8,7 +8,7 @@ import Web3Modal from "web3modal";
 export default function orgReg() {
   const web3ModalRef = useRef();
   const router = useRouter()
-  const contract_addr = "0x9D664a1a1e69D5Bf8581EA91Ef9142339347DcF4"
+  const contract_addr = "0x1CCadcA3488E487b2a1df53Ac800Ca237150F4a7"
   const abi = require('./abi.json')
   const [orgEmail, setorgEmail] = useState("")
   const [orgName, setorgName] = useState("")
