@@ -1,0 +1,37 @@
+{
+    "name": "@decertify/react-app",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint"
+    },
+    "dependencies": {
+        "@celo-tools/use-contractkit": "^3.1.0",
+        "@celo/contractkit": "^3.1.0",
+        "@celo/react-celo": "^4.3.0",
+        "@headlessui/react": "^1.7.8",
+        "@heroicons/react": "^2.0.14",
+        "ethers": "^5.7.2",
+        "next": "13.1.6",
+        "react": "18.2.0",
+        "react-dom": "18.2.0",
+        "wagmi": "^0.11.2"
+    },
+    "devDependencies": {
+        "@types/node": "18.11.18",
+        "@types/react": "18.0.27",
+        "@types/react-dom": "18.0.10",
+        "autoprefixer": "^10.4.13",
+        "eslint": "8.33.0",
+        "eslint-config-next": "13.1.6",
+        "postcss": "^8.4.21",
+        "tailwindcss": "^3.2.4",
+        "typescript": "4.9.5"
+    },
+    "browser": {
+        "net": false
+    }
+}

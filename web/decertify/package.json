@@ -1,0 +1,37 @@
+{
+    "name": "decertify",
+    "version": "1.0.0",
+    "description": "Custom Celo Composer project.",
+    "private": true,
+    "author": "Celo",
+    "license": "MIT",
+    "scripts": {
+        "hardhat:test": "yarn workspace @decertify/hardhat test",
+        "hardhat:test-local": "yarn workspace @decertify/hardhat test-local",
+        "hardhat:accounts": "yarn workspace @decertify/hardhat accounts",
+        "hardhat:devchain": "yarn workspace @decertify/hardhat devchain",
+        "hardhat:deploy": "yarn workspace @decertify/hardhat deploy",
+        "hardhat:deploy-reset-watch": "yarn workspace @decertify/hardhat deploy-reset-watch",
+        "hardhat:watch": "yarn workspace @decertify/hardhat watch",
+        "hardhat:fork-mainnet": "yarn workspace @decertify/hardhat fork-mainnet",
+        "react-app:dev": "yarn workspace @decertify/react-app dev",
+        "react-app:build": "yarn workspace @decertify/react-app build",
+        "react-app:start": "yarn workspace @decertify/react-app start",
+        "react-app:lint": "yarn workspace @decertify/react-app lint"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/celo-org/celo-composer.git"
+    },
+    "bugs": {
+        "url": "https://github.com/celo-org/celo-composer/issues"
+    },
+    "homepage": "https://github.com/celo-org/celo-composer/blob/main/README.md",
+    "workspaces": [
+        "packages/*"
+    ],
+    "keywords": [
+        "celo-composer",
+        "celo"
+    ]
+}
