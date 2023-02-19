@@ -15,12 +15,12 @@ export default function StudentRegister() {
         <StyledView className="p-4 rounded shadow-md">
             <StyledText className="text-lg m-1">Name:</StyledText>
             <TextInput placeholder='John Doe' className="bg-gray-400 rounded w-64 pt-2 p-2 text-lg"></TextInput>
+            <StyledText className="text-lg m-1">Registration ID:</StyledText>
+            <TextInput placeholder='Enter your Reg ID' className="bg-gray-400 rounded w-64 pt-2 p-2 text-lg"></TextInput>
             <StyledText className="text-lg m-1">Email ID:</StyledText>
             <TextInput placeholder='email@example.com' className="bg-gray-400 rounded w-64 pt-2 p-2 text-lg"></TextInput>
-            <StyledText className="text-lg m-1">Password:</StyledText>
-            <TextInput placeholder='Enter your Password' className="bg-gray-400 rounded w-64 pt-2 p-2 text-lg"></TextInput>
-            <StyledText className="text-lg m-1">Confirm Password:</StyledText>
-            <TextInput placeholder='Confirm your Password' className="bg-gray-400 rounded w-64 pt-2 p-2 text-lg"></TextInput>
+            <StyledText className="text-lg m-1">Mobile No:</StyledText>
+            <TextInput placeholder='912319210932' className="bg-gray-400 rounded w-64 pt-2 p-2 text-lg"></TextInput>
         </StyledView>
         <StyledView className='flex-row'>
         <Button className="bg-blue-400 mx-2 ">
