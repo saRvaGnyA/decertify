@@ -8,7 +8,7 @@ import RequestObject from "./requestObject.js"
 
 export default function dashboard() {
     const web3ModalRef = useRef();
-    const contract_addr = "0x8e7A3500b045aC047603c5AF28c47BCF28D16661"
+    const contract_addr = "0xfB83a23f36a852e7a90DD304DeB7D4f6542D56F7"
     const abi = require('./abi.json')
     const [requestsList, setrequestsList] = useState([])
     const getReqList = async () => {
@@ -144,7 +144,6 @@ export default function dashboard() {
                                 <tbody>
                                     {requestsList.map((ele) => {
                                         return <RequestObject element={ele} />
-
                                     })}
                                 </tbody>
                             </table>

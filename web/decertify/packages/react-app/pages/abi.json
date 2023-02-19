@@ -146,6 +146,41 @@
   },
   {
     "inputs": [],
+    "name": "getOrganizations",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "organizationAddress",
+            "type": "address"
+          },
+          {
+            "internalType": "string",
+            "name": "organizationName",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "organizationEmail",
+            "type": "string"
+          },
+          {
+            "internalType": "uint256",
+            "name": "requestCount",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct Decertify.Organization[]",
+        "name": "",
+        "type": "tuple[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
     "name": "getRequests",
     "outputs": [
       {
@@ -196,9 +231,9 @@
             "type": "uint256"
           },
           {
-            "internalType": "uint256",
+            "internalType": "int256",
             "name": "status",
-            "type": "uint256"
+            "type": "int256"
           },
           {
             "internalType": "string",
@@ -316,9 +351,9 @@
             "type": "uint256"
           },
           {
-            "internalType": "uint256",
+            "internalType": "int256",
             "name": "status",
-            "type": "uint256"
+            "type": "int256"
           },
           {
             "internalType": "string",

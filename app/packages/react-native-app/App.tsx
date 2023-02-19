@@ -17,6 +17,7 @@ import StudentConnectWallet from "./screens/StudentConnectWallet";
 import OrgSearch from "./screens/OrgSearch";
 import ApplicationScreen from "./screens/ApplicationScreen";
 import VerifierWallet from "./screens/VerifierConnectWallet";
+import ScanScreen from "./screens/ScanScreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -48,6 +49,7 @@ export default function App() {
               <Stack.Screen name="Search" component={OrgSearch} />
               <Stack.Screen name="Application" component={ApplicationScreen} />
               <Stack.Screen name="VerifierWallet" component={VerifierWallet} />
+              <Stack.Screen name="Scanner" component={ScanScreen} />
             </Stack.Navigator>
           </SafeAreaProvider>
         </ThemeProvider>

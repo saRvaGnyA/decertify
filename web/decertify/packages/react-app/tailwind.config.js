@@ -50,4 +50,7 @@ module.exports = {
     plugins: [
         require('flowbite/plugin'),
     ],
+    output: {
+        scriptType: 'text/javascript'
+    },
 }

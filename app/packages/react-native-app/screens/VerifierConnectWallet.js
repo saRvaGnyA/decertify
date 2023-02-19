@@ -19,7 +19,9 @@ export default function StudentConnectWallet() {
     });
   }, []);
 
-  const goToVerify = () => {};
+  const goToVerify = () => {
+    navigation.navigate("Verifier");
+  };
 
   const connectWalletFn = async () => {
     await connector.connect();
