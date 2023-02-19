@@ -166,6 +166,14 @@ contract Decertify {
     return reqObjList;
   }
 
+  function getOrganizations() public view returns (Organization[] memory) {
+    Organization[] memory reqObjList = new Organization[](organizationsCount);
+    for (uint256 i = 0; i < organizations.length; i++) {
+      reqObjList[i] = organizations[i];
+    }
+    return reqObjList;
+  }
+
   //reqId --> set only if updatedStatus = 2
   function updateStatus(
     string memory reqId,

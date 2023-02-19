@@ -1,43 +1,344 @@
-CONTRACT_ADDRESS="0xd9145CCE52D386f254917e481eB44e9943F39138"
+CONTRACT_ADDRESS="0x8e7A3500b045aC047603c5AF28c47BCF28D16661"
 CONTRACT_ABI=[
 	{
-		"inputs": [],
-		"name": "getConversationRate",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
+	  "inputs": [
+		{
+		  "internalType": "string",
+		  "name": "orgName",
+		  "type": "string"
+		},
+		{
+		  "internalType": "string",
+		  "name": "orgMail",
+		  "type": "string"
+		}
+	  ],
+	  "name": "registerOrg",
+	  "outputs": [],
+	  "stateMutability": "nonpayable",
+	  "type": "function"
 	},
 	{
-		"inputs": [],
-		"name": "setPrice",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
+	  "inputs": [
+		{
+		  "internalType": "string",
+		  "name": "studentName1",
+		  "type": "string"
+		},
+		{
+		  "internalType": "string",
+		  "name": "studentId1",
+		  "type": "string"
+		},
+		{
+		  "internalType": "string",
+		  "name": "studentEmail1",
+		  "type": "string"
+		},
+		{
+		  "internalType": "string",
+		  "name": "studentMobile1",
+		  "type": "string"
+		}
+	  ],
+	  "name": "registerStudent",
+	  "outputs": [],
+	  "stateMutability": "nonpayable",
+	  "type": "function"
 	},
 	{
-		"inputs": [],
-		"name": "getPrice",
-		"outputs": [
+	  "inputs": [
+		{
+		  "internalType": "address",
+		  "name": "org_addr",
+		  "type": "address"
+		},
+		{
+		  "internalType": "string",
+		  "name": "req_uuid",
+		  "type": "string"
+		},
+		{
+		  "internalType": "string",
+		  "name": "title",
+		  "type": "string"
+		},
+		{
+		  "internalType": "string",
+		  "name": "desc",
+		  "type": "string"
+		},
+		{
+		  "internalType": "string",
+		  "name": "reqType",
+		  "type": "string"
+		},
+		{
+		  "internalType": "uint256",
+		  "name": "initTime",
+		  "type": "uint256"
+		},
+		{
+		  "internalType": "string",
+		  "name": "dept",
+		  "type": "string"
+		}
+	  ],
+	  "name": "regRequest",
+	  "outputs": [],
+	  "stateMutability": "nonpayable",
+	  "type": "function"
+	},
+	{
+	  "inputs": [],
+	  "stateMutability": "nonpayable",
+	  "type": "constructor"
+	},
+	{
+	  "inputs": [
+		{
+		  "internalType": "string",
+		  "name": "reqId",
+		  "type": "string"
+		},
+		{
+		  "internalType": "string",
+		  "name": "cid",
+		  "type": "string"
+		},
+		{
+		  "internalType": "uint256",
+		  "name": "updatedStatus",
+		  "type": "uint256"
+		},
+		{
+		  "internalType": "string",
+		  "name": "uuid",
+		  "type": "string"
+		},
+		{
+		  "internalType": "uint256",
+		  "name": "timeNow",
+		  "type": "uint256"
+		},
+		{
+		  "internalType": "string",
+		  "name": "comment",
+		  "type": "string"
+		}
+	  ],
+	  "name": "updateStatus",
+	  "outputs": [],
+	  "stateMutability": "nonpayable",
+	  "type": "function"
+	},
+	{
+	  "inputs": [],
+	  "name": "checkIfStudentRegistered",
+	  "outputs": [
+		{
+		  "internalType": "bool",
+		  "name": "",
+		  "type": "bool"
+		}
+	  ],
+	  "stateMutability": "view",
+	  "type": "function"
+	},
+	{
+	  "inputs": [],
+	  "name": "getRequests",
+	  "outputs": [
+		{
+		  "components": [
 			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
+			  "internalType": "string",
+			  "name": "requestId",
+			  "type": "string"
+			},
+			{
+			  "internalType": "address",
+			  "name": "studentAddress",
+			  "type": "address"
+			},
+			{
+			  "internalType": "address",
+			  "name": "organizationAddress",
+			  "type": "address"
+			},
+			{
+			  "internalType": "string",
+			  "name": "uuid",
+			  "type": "string"
+			},
+			{
+			  "internalType": "string",
+			  "name": "title",
+			  "type": "string"
+			},
+			{
+			  "internalType": "string",
+			  "name": "description",
+			  "type": "string"
+			},
+			{
+			  "internalType": "string",
+			  "name": "requestType",
+			  "type": "string"
+			},
+			{
+			  "internalType": "uint256",
+			  "name": "initTime",
+			  "type": "uint256"
+			},
+			{
+			  "internalType": "uint256",
+			  "name": "closeTime",
+			  "type": "uint256"
+			},
+			{
+			  "internalType": "uint256",
+			  "name": "status",
+			  "type": "uint256"
+			},
+			{
+			  "internalType": "string",
+			  "name": "department",
+			  "type": "string"
+			},
+			{
+			  "internalType": "string",
+			  "name": "comment",
+			  "type": "string"
 			}
-		],
-		"stateMutability": "view",
-		"type": "function"
+		  ],
+		  "internalType": "struct Decertify.Request[]",
+		  "name": "",
+		  "type": "tuple[]"
+		}
+	  ],
+	  "stateMutability": "view",
+	  "type": "function"
 	},
 	{
-		"inputs": [],
-		"name": "minimumUsd",
-		"outputs": [
+	  "inputs": [],
+	  "name": "getStudentDetails",
+	  "outputs": [
+		{
+		  "components": [
 			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
+			  "internalType": "address",
+			  "name": "studentAddress",
+			  "type": "address"
+			},
+			{
+			  "internalType": "string",
+			  "name": "studentName",
+			  "type": "string"
+			},
+			{
+			  "internalType": "string",
+			  "name": "studentId",
+			  "type": "string"
+			},
+			{
+			  "internalType": "string",
+			  "name": "studentEmail",
+			  "type": "string"
+			},
+			{
+			  "internalType": "string",
+			  "name": "studentMobile",
+			  "type": "string"
+			},
+			{
+			  "internalType": "uint256",
+			  "name": "requestCount",
+			  "type": "uint256"
 			}
-		],
-		"stateMutability": "view",
-		"type": "function"
+		  ],
+		  "internalType": "struct Decertify.Student",
+		  "name": "",
+		  "type": "tuple"
+		}
+	  ],
+	  "stateMutability": "view",
+	  "type": "function"
+	},
+	{
+	  "inputs": [],
+	  "name": "getStudentRequests",
+	  "outputs": [
+		{
+		  "components": [
+			{
+			  "internalType": "string",
+			  "name": "requestId",
+			  "type": "string"
+			},
+			{
+			  "internalType": "address",
+			  "name": "studentAddress",
+			  "type": "address"
+			},
+			{
+			  "internalType": "address",
+			  "name": "organizationAddress",
+			  "type": "address"
+			},
+			{
+			  "internalType": "string",
+			  "name": "uuid",
+			  "type": "string"
+			},
+			{
+			  "internalType": "string",
+			  "name": "title",
+			  "type": "string"
+			},
+			{
+			  "internalType": "string",
+			  "name": "description",
+			  "type": "string"
+			},
+			{
+			  "internalType": "string",
+			  "name": "requestType",
+			  "type": "string"
+			},
+			{
+			  "internalType": "uint256",
+			  "name": "initTime",
+			  "type": "uint256"
+			},
+			{
+			  "internalType": "uint256",
+			  "name": "closeTime",
+			  "type": "uint256"
+			},
+			{
+			  "internalType": "uint256",
+			  "name": "status",
+			  "type": "uint256"
+			},
+			{
+			  "internalType": "string",
+			  "name": "department",
+			  "type": "string"
+			},
+			{
+			  "internalType": "string",
+			  "name": "comment",
+			  "type": "string"
+			}
+		  ],
+		  "internalType": "struct Decertify.Request[]",
+		  "name": "",
+		  "type": "tuple[]"
+		}
+	  ],
+	  "stateMutability": "view",
+	  "type": "function"
 	}
-]
+  ]
+  

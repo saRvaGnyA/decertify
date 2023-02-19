@@ -1,23 +1,32 @@
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useCallback, useRef, useEffect, useState } from "react";
 import { ContractKitProvider, useContractKit } from "@celo-tools/use-contractkit";
-import { newKitFromWeb3 } from "@celo/contractkit/lib/mini-kit";
+import { MiniContractKit, newKitFromWeb3 } from "@celo/contractkit/lib/mini-kit";
 // import {Greeter} from '../../hardhat/contracts/FundMe.sol'
 import Web3 from "web3"
+import { Contract, providers, } from "ethers";
+import { useCelo } from "@celo/react-celo";
+import Web3Modal from "web3modal";
+import QRCode from "react-qr-code";
+import {PDFtoIMG} from 'react-pdf-to-image';
+
 export default function home() {
-    const web3 = new Web3("https://alfajores-forno.celo-testnet.org");
-    const kit = newKitFromWeb3(web3)
-    // const { kit, address, network, performActions } = useContractKit();
-    const  abi =require('./abi.json')
-    const contract_addr = "0x4D051507a2ef3A82BBd852e2c79a1E06229A4931"
-    const getPrice = async () => {
-        const contractInstance = new kit.connection.web3.eth.Contract(abi, contract_addr)
-        const price = await contractInstance.methods.getPrice().call();      
-        console.log( price)
-    }
+
+
     return (
         <div>
-            Hello
-            <button onClick={getPrice}>Click</button>
+            <QRCode value="hey" />
+            <PDFtoIMG file={file}>
+                {({ pages }) => {
+                    if (!pages.length) return 'Loading...';
+                    return pages.map((page, index) =>
+                        <img key={index} src={page} />
+                    );
+                }}
+            </PDFtoIMG>
+
+            <button className="m-2">Get Request</button>
+
+            {/* <button onClick={getPrice}>Click</button> */}
         </div>
 
     )
