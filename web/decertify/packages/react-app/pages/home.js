@@ -4,7 +4,6 @@ import { newKitFromWeb3 } from "@celo/contractkit/lib/mini-kit";
 // import {Greeter} from '../../hardhat/contracts/FundMe.sol'
 import Web3 from "web3"
 export default function home() {
-    const fs = require('fs');
     const web3 = new Web3("https://alfajores-forno.celo-testnet.org");
     const kit = newKitFromWeb3(web3)
     // const { kit, address, network, performActions } = useContractKit();
@@ -16,8 +15,6 @@ export default function home() {
         console.log( price)
     }
     return (
-        
-
         <div>
             Hello
             <button onClick={getPrice}>Click</button>

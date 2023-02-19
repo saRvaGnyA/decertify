@@ -15,7 +15,7 @@ async function main() {
 
   console.log("Account balance:", (await deployer.getBalance()).toString())
 
-  const Token = await ethers.getContractFactory("SimpleStorage")
+  const Token = await ethers.getContractFactory("Decertify")
   const token = await Token.deploy()
   await token.deployed()
 

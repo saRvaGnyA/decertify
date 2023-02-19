@@ -173,7 +173,7 @@ contract Decertify {
     uint256 updatedStatus,
     string memory uuid,
     uint256 timeNow,
-    string comment
+    string memory comment
   ) public {
     Request memory reqObj = requestsMapping[reqId];
     reqObj.status = updatedStatus;
