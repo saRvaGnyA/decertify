@@ -1,5 +1,5 @@
 
-import React, { useRef, useState } from "react";
+import React, { useRef, useState,useEffect } from "react";
 import Web3 from "web3"
 import { Contract, providers, } from "ethers";
 import Web3Modal from "web3modal";
@@ -8,16 +8,10 @@ import RequestObject from "./requestObject.js"
 
 export default function dashboard() {
     const web3ModalRef = useRef();
-    const contract_addr = "0xfB83a23f36a852e7a90DD304DeB7D4f6542D56F7"
+    const contract_addr = "0x9D664a1a1e69D5Bf8581EA91Ef9142339347DcF4"
     const abi = require('./abi.json')
+    const [orgDet, setorgDet] = useState([])
     const [requestsList, setrequestsList] = useState([])
-    const getReqList = async () => {
-        const signer = await getProviderOrSigner(true);
-        const contractInstance = new Contract(contract_addr, abi, signer);
-        const newReqList = await contractInstance.getRequests();
-        console.log(newReqList);
-        setrequestsList(newReqList);
-    }
     const getProviderOrSigner = async (needSigner) => {
         web3ModalRef.current = new Web3Modal({
             network: "Celo (Alfajores Testnet)",
@@ -39,12 +33,33 @@ export default function dashboard() {
 
         return web3Provider;
     };
+    const getReqList = async () => {
+        const signer = await getProviderOrSigner(true);
+        const contractInstance = new Contract(contract_addr, abi, signer);
+        const newReqList = await contractInstance.getRequests();
+        console.log(newReqList);
+        setrequestsList(newReqList);
+    }
+    const getOrgDet = async () => {
+        const signer = await getProviderOrSigner(true);
+        const contractInstance = new Contract(contract_addr, abi, signer);
+        const newReqList = await contractInstance.getOrgDetails();
+        console.log(newReqList);
+        setorgDet(newReqList);
+    }
+    useEffect(() => {
+        getOrgDet()
+
+
+    }, [])
+
+
     // getReqList();
 
     return (
         <div class="min-h-screen min-w-full">
             <section class="bg-white dark:bg-gray-900">
-                <h1 class="text-center mb-4 text-4xl tracking-tight font-extrabold leading-tight text-gray-900 dark:text-white">Institute Name</h1>
+                <h1 class="text-center mb-4 text-4xl tracking-tight font-extrabold leading-tight text-gray-900 dark:text-white">{orgDet.organizationName}</h1>
             </section>
 
             <section class="bg-gray-50 dark:bg-gray-900 p-3 sm:p-5">

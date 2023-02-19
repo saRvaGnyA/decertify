@@ -20,7 +20,7 @@ export default function StudentConnectWallet() {
   }, []);
 
   const goToVerify = () => {
-    navigation.navigate("Verifier");
+    navigation.navigate("Scanner");
   };
 
   const connectWalletFn = async () => {

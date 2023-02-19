@@ -12440,6 +12440,11 @@ wagmi@^0.11.2:
     abitype "^0.3.0"
     use-sync-external-store "^1.2.0"
 
+wallet-sdk@^0.0.0:
+  version "0.0.0"
+  resolved "https://registry.yarnpkg.com/wallet-sdk/-/wallet-sdk-0.0.0.tgz#e66cddcc0b04a7de3d027e2b3ea05fc10a6af528"
+  integrity sha512-ZD+/GEmUTtMZdz6Ms6QmA6HRgD96qw+ULx6G6nbiRkg8kaAXtHa9kNt1vze6husqphCeGfhjyLxEjzMQFqAVLA==
+
 warning@^4.0.3:
   version "4.0.3"
   resolved "https://registry.yarnpkg.com/warning/-/warning-4.0.3.tgz#16e9e077eb8a86d6af7d64aa1e05fd85b4678ca3"

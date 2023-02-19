@@ -25,11 +25,13 @@
     "@walletconnect/react-native-dapp": "^1.7.7",
     "@walletconnect/web3-provider": "^1.8.0",
     "base-64": "^1.0.0",
+    "blob-compare": "^1.1.0",
     "crypto-browserify": "^3.12.0",
     "expo": "^47.0.0",
     "expo-asset": "~8.7.0",
     "expo-barcode-scanner": "~12.1.0",
     "expo-constants": "~14.0.2",
+    "expo-document-picker": "~11.0.1",
     "expo-font": "~11.0.1",
     "expo-linking": "~3.3.0",
     "expo-splash-screen": "~0.17.5",
@@ -51,11 +53,13 @@
     "react-native-spinkit": "^1.5.1",
     "react-native-vector-icons": "^9.2.0",
     "react-native-web": "0.18.9",
+    "rn-fetch-blob": "^0.12.0",
     "stream-browserify": "^3.0.0",
     "stream-http": "^3.2.0",
     "uuid": "^9.0.0",
     "vm-browserify": "^1.1.2",
-    "web3": "^1.8.0"
+    "web3": "^1.8.0",
+    "web3.storage": "^4.4.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",

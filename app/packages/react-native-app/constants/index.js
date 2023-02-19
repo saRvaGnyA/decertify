@@ -1,6 +1,41 @@
-export const contractAddress = "0xD1be1Ad44cf4be0Eb4eb34B503BC30b5809d44E1";
+export const contractAddress = "0x6175106171e32aE36c4E7483C8c9C0cc065F3eF7";
 
 export const abi = [
+  {
+    inputs: [],
+    name: "getOrgDetails",
+    outputs: [
+      {
+        components: [
+          {
+            internalType: "address",
+            name: "organizationAddress",
+            type: "address",
+          },
+          {
+            internalType: "string",
+            name: "organizationName",
+            type: "string",
+          },
+          {
+            internalType: "string",
+            name: "organizationEmail",
+            type: "string",
+          },
+          {
+            internalType: "uint256",
+            name: "requestCount",
+            type: "uint256",
+          },
+        ],
+        internalType: "struct Decertify.Organization",
+        name: "",
+        type: "tuple",
+      },
+    ],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
   {
     inputs: [
       {
@@ -147,6 +182,25 @@ export const abi = [
     type: "function",
   },
   {
+    inputs: [
+      {
+        internalType: "string",
+        name: "uuid",
+        type: "string",
+      },
+    ],
+    name: "getHashedVal",
+    outputs: [
+      {
+        internalType: "string",
+        name: "",
+        type: "string",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
     inputs: [],
     name: "getOrganizations",
     outputs: [
@@ -233,9 +287,9 @@ export const abi = [
             type: "uint256",
           },
           {
-            internalType: "uint256",
+            internalType: "int256",
             name: "status",
-            type: "uint256",
+            type: "int256",
           },
           {
             internalType: "string",
@@ -353,9 +407,9 @@ export const abi = [
             type: "uint256",
           },
           {
-            internalType: "uint256",
+            internalType: "int256",
             name: "status",
-            type: "uint256",
+            type: "int256",
           },
           {
             internalType: "string",

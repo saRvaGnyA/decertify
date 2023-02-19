@@ -1,28 +1,7 @@
 import React, { useCallback, useRef, useEffect, useState } from "react";
-const fs = require("fs");
 import download from "downloadjs";
-
-import { degrees, PDFDocument, rgb, StandardFonts } from "pdf-lib";
-
+import { PDFDocument } from "pdf-lib";
 import { Web3Storage } from "web3.storage/dist/bundle.esm.min.js";
-import {
-  Document,
-  Image,
-  Page,
-  Text,
-  View,
-  StyleSheet,
-} from "@react-pdf/renderer";
-
-function downloadPDF(pdf) {
-  const linkSource = `data:application/pdf;base64,${pdf}`;
-  const downloadLink = document.createElement("a");
-  const fileName = "file.pdf";
-
-  downloadLink.href = linkSource;
-  downloadLink.download = fileName;
-  downloadLink.click();
-}
 
 export default function home() {
   let QRCode = require("qrcode");
@@ -78,7 +57,7 @@ export default function home() {
     const firstPage = pages[0];
 
     // Get the width and height of the first page
-    const { width, height } = firstPage.getSize();
+    const { width } = firstPage.getSize();
 
     const jpgImage = await pdfDoc.embedJpg(imgData);
 
