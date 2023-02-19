@@ -7,7 +7,7 @@
 </h1>
 
 <div align="center">
-   <strong>deCertify</strong> - Security and Verification of Ceritificates using the power of BlockChain.<br>
+   <strong>deCertify</strong> - Security and Verification of Certificates using the power of BlockChain.<br>
   DU Hacks 2.0 || Team Trojan Horse.
 </div>
 <hr>
@@ -41,8 +41,9 @@ deCertify works as follows:
 
 
 ## Resources
-- [Demo Video]()
+- [Demo Video](https://youtu.be/NPaDbadaqvY)
 - [GitHub Repository](https://github.com/saRvaGnyA/decertify)
+- [Deployed Contract on CeloScan](https://alfajores.celoscan.io/address/0x1CCadcA3488E487b2a1df53Ac800Ca237150F4a7)
 
 ## 🤖Tech-Stack
 
