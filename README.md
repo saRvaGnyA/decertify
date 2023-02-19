@@ -44,6 +44,7 @@ deCertify works as follows:
 - [Demo Video](https://youtu.be/NPaDbadaqvY)
 - [GitHub Repository](https://github.com/saRvaGnyA/decertify)
 - [Deployed Contract on CeloScan](https://alfajores.celoscan.io/address/0x1CCadcA3488E487b2a1df53Ac800Ca237150F4a7)
+- [Devfolio Submission](https://devfolio.co/projects/decertify-7000)
 
 ## 🤖Tech-Stack
 
