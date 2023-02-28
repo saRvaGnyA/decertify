@@ -8,7 +8,7 @@
 
 <div align="center">
    <strong>deCertify</strong> - Security and Verification of Certificates using the power of BlockChain.<br>
-  DU Hacks 2.0 || Team Trojan Horse.
+  DU Hacks 2.0 Winner 🥇 || Team Trojan Horse.
 </div>
 <hr>
 
